@@ -6,6 +6,11 @@ Geliştirme sürecini buradan yürütmek oldukça kolay. Öncelikle, Herkesin gi
 
  İlk aşamada Tek branch üstünden ilerleyeceğiz, ilk toplantıdan sonra herkes kendi geliştirmesine uygun alt versiyon branchleri açıp devam edecek. 
 
- Feedback direkt git üzerinden olacak. 
+ Feedbackler direkt git üzerinden olacak. 
+
+ Visual Studio'da git kullanımı gayet kolay ve kullanışlı, kullanımda herhangi bir yerde biri problem yaşarsa mutlaka haberleşelim. 
+
+ konuşmadığımız zamanlarda da birbirimizin ilerlemelerine bakıp değişiklikler yapabilme imkanı oluşuyor bu şekilde o yüzden geliştirme sürecine olumlu katkısı olacak.
 
 
+ 
