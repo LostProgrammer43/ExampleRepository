@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 * {
   box-sizing: border-box;
+  font-size: 13px;
+  cursor: none;
 }
 body{
     background-color: black;
@@ -70,14 +75,16 @@ body{
     display: inline-block;
 }
 .header a.header-nav-link {
-    font-size: 15px;
-    color: #fff;
+    font-size: 22px;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
     padding: 10px 5px;
-    font-family: 'Italiana', serif;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.3s ease;
 }
-.header-buttons > a:hover {
-    opacity: 1;
-    transition: opacity .35s cubic-bezier(.39,.575,.565,1) 0s;
+.header-nav-link > span {
+    display: inline-block;
+    transition: transform 0.1s linear;
 }
 a:active, a:hover, a:link, a:visited {
     color: #fff;
@@ -85,11 +92,39 @@ a:active, a:hover, a:link, a:visited {
 }
 .header-logo > a {
     font-size: 20px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Heebo", sans-serif;
 }
 .header .header-content, .header .header-logo {
     display: flex;
 }
 .header li {
     padding-left: 50px;
+}
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    padding: 0.2rem;
+    background-color: #fff;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: transform 0.6s ease;
+    opacity: 1;
+}
+.header-nav-link:hover ~ .cursor {
+    transform: translate(-50%, -50%) scale(45);
+}
+
+@media(min-width: 900px) {
+
+    .header-navbar {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media(max-width: 900px) {
+
+    .header-navbar {
+        top: 10%;
+    }
 }

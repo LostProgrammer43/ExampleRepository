@@ -7,6 +7,7 @@
     <meta name="description" content="This will be a description of the Site">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/">
+    <link href="//db.onlinewebfonts.com/c/55d433372d270829c51e2577a78ef12d?family=Monument+Extended" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <div class="main-bg">
@@ -18,19 +19,8 @@
                 <nav class="header-navbar">
                     <ul class="buttons">
                         <li class="header-buttons">
-                            <a href="" class="header-nav-link">Koleksiyon </a>
-                        </li>
-                        <li class="header-buttons">
-                            <a href="" class="header-nav-link">Teknik Porselen</a>
-                        </li>
-                        <li class="header-buttons">
-                            <a href="" class="header-nav-link">Seramik Sır & Hobi</a>
-                        </li>
-                        <li class="header-buttons">
-                            <a href="" class="header-nav-link">Hakkımızda</a>
-                        </li>
-                        <li class="header-buttons">
-                            <a href="" class="header-nav-link">İletişim</a>
+                            <a href="" class="header-nav-link"><span>Menu</span></a>
+                            <div class="cursor"></div>
                         </li>
                     </ul>
                 </nav>
@@ -40,5 +30,39 @@
             </div>
         </header>
     </div>
+    <script>
+
+        (function () {
+        
+              const link = document.querySelectorAll('.header-buttons > .header-nav-link');
+              const cursor = document.querySelector('.cursor');
+        
+              const animateit = function (e) {
+                    const span = this.querySelector('span');
+                    const { offsetX: x, offsetY: y } = e,
+                    { offsetWidth: width, offsetHeight: height } = this,
+        
+                    move = 5,
+                    xMove = x / width * (move * 2) - move,
+                    yMove = y / height * (move * 2) - move;
+        
+                    span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+        
+                    if (e.type === 'mouseleave') span.style.transform = '';
+              };
+        
+              const editCursor = e => {
+                    const { clientX: x, clientY: y } = e;
+                    cursor.style.left = x + 'px';
+                    cursor.style.top = y + 'px';
+              };
+        
+              link.forEach(b => b.addEventListener('mousemove', animateit));
+              link.forEach(b => b.addEventListener('mouseleave', animateit));
+              window.addEventListener('mousemove', editCursor);
+        
+        })();
+        
+    </script>
 </body>
 </html
