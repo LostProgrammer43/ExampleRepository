@@ -44,7 +44,7 @@ html, body{
     position: relative;
 }
 .header {
-    position: relative;
+    position: absolute;
     left: 0;
     width: 100%;
     height: auto;    
@@ -150,7 +150,7 @@ span.menu-button {
 }
 button.header-nav-link {
     border: none;
-    background-color: black;
+    background: none;
     font-family: "Orbitron", sans-serif;
     font-size: 22px;
     text-decoration: none;
@@ -164,6 +164,37 @@ button.header-nav-link:active {
 button.header-nav-link:focus {
     outline: none;
     border: none;
+}
+
+.menu {
+    z-index: 0;
+    opacity: 1;
+    position: absolute;
+    background: white;
+    height: 100vh;
+    width: 100%;
+    left: -97%;
+}
+.data {
+    text-align: left;
+    padding-top: 210px;
+    padding-left: 95px;
+}
+.main-nav ul {
+    list-style: none;
+}
+.main-nav li a {
+    background: none;
+    color: black;
+    font-size: 96px;
+    font-family: "Heebo", sans-serif;
+    font-weight: 400;
+    letter-spacing: -5px;
+    line-height: 100px;
+}
+span.Close {
+    position: absolute;
+    right: 7px;
 }
 
 @media(min-width: 900px) {
