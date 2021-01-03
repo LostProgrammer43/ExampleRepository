@@ -25,8 +25,8 @@
 
     $(".header-nav-link").click(function() {
         $('.menu-prop').toggleClass('reverse');
+        $('.cursor').toggleClass('.wh-bg-cursor');
       });
 
-    
    // $('.handle').attr('style','left: 300px');, to edit style attribute //
       
