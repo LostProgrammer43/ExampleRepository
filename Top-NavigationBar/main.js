@@ -21,6 +21,12 @@
           el.data("text-original", el.text());
           el.text(el.data("text-swap"));
         }
-        
       });
+
+    $(".header-nav-link").click(function() {
+        $('.menu-prop').toggleClass('reverse');
+      });
+
+    
+   // $('.handle').attr('style','left: 300px');, to edit style attribute //
       
