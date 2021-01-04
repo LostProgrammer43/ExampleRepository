@@ -16,6 +16,7 @@ html, body{
     padding: 0;
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
 }
 .overlay::before {
     animation: grain ls steps(10) infinite;
@@ -238,6 +239,30 @@ span.menu-prop.reverse:hover {
     padding: 10px 5px;
     font-family: 'Orbitron', sans-serif;
     transition: all 0.3s ease;
+}
+.side-img-nav {
+    position: absolute;
+    width: 10%;
+    height: 100vh;
+    margin-top: 0;
+    margin-right: 0;
+    top: 0;
+    right: 0;
+    background: black;
+}
+.nav-img-holder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 10%;
+}
+.menu .nav-img-holder {
+    padding-right: 500px;
+    background: black;
+}
+.nav-img-holder video {
+    opacity: .700;
 }
 @media(min-width: 900px) {
 
