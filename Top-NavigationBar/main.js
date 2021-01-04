@@ -25,8 +25,12 @@
 
     $(".header-nav-link").click(function() {
         $('.menu-prop').toggleClass('reverse');
-        $('.cursor').toggleClass('.wh-bg-cursor');
+        $('.header-logo').toggleClass('header-logo-black');
       });
+
+    $(".header-nav-link").click(function() {
+        $('.cursor').toggleClass('cursor-black');
+      });  
 
    // $('.handle').attr('style','left: 300px');, to edit style attribute //
       

@@ -119,6 +119,8 @@ a:active, a:hover, a:link, a:visited {
 .header-logo > a {
     font-size: 20px;
     font-family: "Heebo", sans-serif;
+    color: #fff;
+    text-decoration: none;
 }
 .header .header-content, .header .header-logo {
     display: flex;
@@ -173,7 +175,7 @@ button.header-nav-link:focus {
     background: white;
     height: 100vh;
     width: 100%;
-    left: -97%;
+    left: -96%;
 }
 .data {
     text-align: left;
@@ -204,7 +206,39 @@ span.Close {
     font-family: 'Orbitron', sans-serif;
     transition: all 0.3s ease;
 }
-
+.header-logo-black {
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+    pointer-events: auto;
+}
+.header-logo-black > a{
+    font-size: 20px;
+    font-family: "Heebo", sans-serif;
+    color: black;
+    text-decoration: none;
+}
+.cursor-black {
+    pointer-events: none;
+    position: fixed;
+    padding: 0.2rem;
+    background-color: black;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: transform 0.6s ease;
+    opacity: 1;
+}
+.header-nav-link:hover ~ .cursor-black {
+    transform: translate(-50%, -50%) scale(45);
+}
+span.menu-prop.reverse:hover {
+    font-size: 22px;
+    font-weight: 100;
+    color: white;
+    padding: 10px 5px;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.3s ease;
+}
 @media(min-width: 900px) {
 
     .header-navbar {
