@@ -24,7 +24,6 @@
       });
 
     $(".header-nav-link").click(function() {
-        $('.menu-prop').toggleClass('reverse');
         $('.header-logo').toggleClass('header-logo-black');
       });
 
