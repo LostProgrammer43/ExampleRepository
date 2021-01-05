@@ -18,6 +18,10 @@ html, body{
     height: 100vh;
     overflow-x: hidden;
 }
+body.body-normal.no-scroll {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 .overlay::before {
     animation: grain ls steps(10) infinite;
     content: "";
@@ -240,22 +244,12 @@ span.menu-prop.reverse:hover {
     font-family: 'Orbitron', sans-serif;
     transition: all 0.3s ease;
 }
-.side-img-nav {
-    position: absolute;
-    width: 10%;
-    height: 100vh;
-    margin-top: 0;
-    margin-right: 0;
-    top: 0;
-    right: 0;
-    background: black;
-}
 .nav-img-holder {
     position: absolute;
     top: 0;
     right: 0;
     height: 100vh;
-    width: 10%;
+    width: 20%;
 }
 .menu .nav-img-holder {
     padding-right: 400px;
@@ -263,6 +257,24 @@ span.menu-prop.reverse:hover {
 }
 .nav-img-holder video {
     opacity: .700;
+}
+
+@media (max-width: 900px) {
+    .nav-img-holder {
+        display: none;
+    }
+    video {
+        width: auto;
+        height: 100%;
+    }
+}
+@media (max-width: 768px) {
+    video {
+        display: none;
+    }
+    .nav-img-holder {
+        display: none;
+    }
 }
 @media(min-width: 900px) {
 
