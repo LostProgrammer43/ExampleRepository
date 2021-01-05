@@ -41,9 +41,17 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    <!-- TweenMax  -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     
 </head>
 <body class="body-normal">
+
+    <div class="wrapper-ext">
+        <div class="loader-ext"></div>
+    </div>
+
     <div class="main-bg">
         <header id="header-js" class="header">
             <div class="header-content">
@@ -127,8 +135,38 @@
                     </ul>
                 </div>
             </div>
-        </div>
+    </div>
         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>    
+
+    <script>
+
+    TweenMax.to(".wrapper-ext", 2, {
+        top: "-100%",
+        ease: Expo.easeInOut,
+        delay: 3.6
+    });
+
+    var tl = new TimelineMax();
+
+    tl.from(".loader-ext", 1.6, {
+        scaleY: "0%",
+        y: 80,
+        ease: Expo.easeInOut,
+        delay: 1,
+        transformOrigin:"50% 100%"
+    });
+
+    tl.to(".loader-ext", 1.6, {
+        height: "20vh",
+        scaleY: "0%",
+        ease: Expo.easeInOut,
+        transformOrigin:"0% -100%"
+    });
+
+    
+    </script>    
+
     <script>
         var sickPrimary = {
             autoplay: true,
