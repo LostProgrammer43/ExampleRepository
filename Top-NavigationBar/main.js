@@ -31,7 +31,6 @@ $(".header-nav-link").click(function() {
 $(".header-nav-link").click(function() {
     $('.cursor').toggleClass('cursor-black');
   });  
-
- 
-  
 // $('.handle').attr('style','left: 300px');, to edit style attribute //
+
+

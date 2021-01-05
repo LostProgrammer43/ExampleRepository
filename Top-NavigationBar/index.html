@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" data-device="desktop" >
+<html lang="en" data-device="desktop" class="scrollin scroll-smooth" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aydoğdu Sanat</title>
     <meta name="description" content="This will be a description of the Site">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="locomotive-scroll.css">
     <link rel="icon" href="img/">
     <link href="//db.onlinewebfonts.com/c/55d433372d270829c51e2577a78ef12d?family=Monument+Extended" rel="stylesheet" type="text/css"/>
+
+    <!-- Slick -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
 
      <!-- Jquery Cdn -->
 
@@ -27,6 +32,15 @@
     <!-- Materials icons -->
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+    <!-- Swiper JS -->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     
 </head>
 <body class="body-normal">
@@ -49,8 +63,6 @@
         <div class="main-menu">
             <div class="background">
                 <div class="back"></div>
-                <div class="background-circle white">
-
                 </div>
             </div>
             <div role="navigation" class="menu">
@@ -63,35 +75,92 @@
                 <div class="data">
                     <ul class="main-nav">
                         <li class="menu-items-first">
-                            <a href="">
-                                Koleksiyon
-                            </a>
+                            <div class="menu-wrapper">
+                                <div class="menu-item-arrow">
+                                    <ion-icon name="arrow-forward-sharp" style="font-size: 80px;"></ion-icon>
+                                </div>
+                                <a href="">
+                                    Koleksiyon
+                                </a>
+                            </div>
                         </li>
                         <li class="menu-items-other">
-                            <a href="">
-                                Teknik Porselen
-                            </a>
+                            <div class="menu-wrapper">
+                                <div class="menu-item-arrow">
+                                    <ion-icon name="arrow-forward-sharp" style="font-size: 80px;"></ion-icon>
+                                </div>
+                                <a href="">
+                                    Teknik Porselen
+                                </a>
+                            </div>
                         </li>
                         <li class="menu-items-other">
-                            <a href="">
-                                Seramik
-                            </a>
+                            <div class="menu-wrapper">
+                                <div class="menu-item-arrow">
+                                    <ion-icon name="arrow-forward-sharp" style="font-size: 80px;"></ion-icon>
+                                </div>
+                                <a href="">
+                                    Seramik
+                                </a>
+                            </div>
                         </li>
                         <li class="menu-items-other">
-                            <a href="">
-                                Hakkımızda
-                            </a>
+                            <div class="menu-wrapper">
+                                <div class="menu-item-arrow">
+                                    <ion-icon name="arrow-forward-sharp" style="font-size: 80px;"></ion-icon>
+                                </div>
+                                <a href="">
+                                    Hakkımızda
+                                </a>
+                            </div>
                         </li>
                         <li class="menu-items-other">
-                            <a href="">
-                                İletişim
-                            </a>
+                            <div class="menu-wrapper">
+                                <div class="menu-item-arrow">
+                                    <ion-icon name="arrow-forward-sharp" style="font-size: 80px;"></ion-icon>
+                                </div>
+                                <a href="">
+                                    İletişim
+                                </a>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
+        
+    <script>
+        var sickPrimary = {
+            autoplay: true,
+            autoplaySpeed: 2400,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            speed: 1800,
+            cssEase: 'cubic-beizer(.84, 0, .08, .99)',
+            asNavFor: '.text-slider',
+            centerMode: true,
+            prevArrow: $('.prev-button'),
+            nextArrow: $('.next-button')
+
+        }
+
+        var sickSecondary = {
+            autoplay: true,
+            autoplaySpeed: 2400,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 1800,
+            cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+            asNavFor: '.image-slider',
+            prevArrow: $('.prev-button'),
+            nextArrow: $('next-button'),
+        }
+
+        $('.image-slider').slick(sickPrimary);
+        $('.text-slider').slick(sickSecondary);
+
+
+    </script>
 
     <script src="/Top-NavigationBar/main.js"></script>
 
@@ -128,5 +197,7 @@
         
         })();
     </script>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <script src="/Top-NavigationBar/locomotive-scroll.min.js"></script>
 </body>
 </html
