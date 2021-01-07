@@ -249,13 +249,13 @@ span.menu-prop.reverse:hover {
 .nav-img-holder {
     position: absolute;
     top: 0;
-    right: 0;
     height: 100vh;
-    width: 20%;
+    width: 100%;
+    left: 73%;
 }
 .menu .nav-img-holder {
-    padding-right: 400px;
     background: black;
+    background-image: cover;
 }
 .nav-img-holder video {
     opacity: .900;
@@ -308,6 +308,13 @@ li.menu-items-first {
     height: 20vh;
     background: black;
     z-index: 200000;
+}
+.home-header video {
+    background-image: cover;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
 }
 @media (max-width: 900px) {
     .nav-img-holder {
