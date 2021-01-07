@@ -11,6 +11,10 @@ Geliştirme sürecini buradan yürütmek oldukça kolay. Öncelikle, Herkesin gi
  Visual Studio'da git kullanımı gayet kolay ve kullanışlı, kullanımda herhangi bir yerde biri problem yaşarsa mutlaka haberleşelim. 
 
  konuşmadığımız zamanlarda da birbirimizin ilerlemelerine bakıp değişiklikler yapabilme imkanı oluşuyor bu şekilde o yüzden geliştirme sürecine olumlu katkısı olacak.
+ 
+ # Landing Page 
+ 
+Stok Arkaplan videosu hoş duruyor, responsive boyutları yine ayarlarız.
 
 
  
