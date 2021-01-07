@@ -78,16 +78,24 @@ body.body-normal.no-scroll {
     background: linear-gradient(rgba(0,0,0,.86), rgba(0,0,0,.35) 70%, transparent);
     opacity: 1;
 }
-.header .header-logo {
+.header .header-logo-white {
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+    pointer-events: auto;
+}
+.header .header-logo-black {
     justify-content: flex-start;
     align-items: flex-end;
     position: relative;
     pointer-events: auto;
 }
 .header .header-navbar {
-    position: relative;
+    position: absolute;
     padding-right: 100px;
     display: block;
+    padding-top: 1.4%;
+    margin-left: 75%;
 }
 .header .buttons {
     position: relative;
@@ -121,14 +129,23 @@ a:active, a:hover, a:link, a:visited {
     color: #fff;
     text-decoration: none;
 }
-.header-logo > a {
-    font-size: 20px;
-    font-family: "Heebo", sans-serif;
-    color: #fff;
-    text-decoration: none;
+.header-logo-white .logo-white-active {
+    height: 90px;
 }
-.header .header-content, .header .header-logo {
+.passive {
+    opacity: 0;
+}
+.header-logo-black .logo-black-active {
+    height: 90px;
+    padding-left: 3.2px;
+    opacity: 1 !important;
+}
+.header .header-content, .header .header-logo-white {
     display: flex;
+}
+.header .header-content, .header .header-logo-black {
+    display: flex;
+    position: absolute;
 }
 .header li {
     padding-left: 50px;
@@ -218,7 +235,7 @@ span.Close {
     position: relative;
     pointer-events: auto;
 }
-.header-logo-black > a{
+.header-logo-black a{
     font-size: 20px;
     font-family: "Heebo", sans-serif;
     color: black;
