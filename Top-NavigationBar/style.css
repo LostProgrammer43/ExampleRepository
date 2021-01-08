@@ -130,7 +130,8 @@ a:active, a:hover, a:link, a:visited {
     text-decoration: none;
 }
 .header-logo-white .logo-white-active {
-    height: 90px;
+    height: 100px;
+    margin-right: 100px;
 }
 .passive {
     opacity: 0;
