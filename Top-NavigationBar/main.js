@@ -32,6 +32,37 @@ $(".header-nav-link").click(function() {
 $(".header-nav-link").click(function() {
     $('.cursor').toggleClass('cursor-black');
   });  
+
+  $(document).ready(function() {
+    $('.menu-items-other').hover(
+        function() { // handler in
+          $('.navbar-images').css('opacity', 1);
+          // Additional actions (display info, etc.)
+        }, function() { // handler out
+          $('.navbar-images').css('opacity', 0);
+          // Additional actions (hide info, etc.)
+        }
+    );
+  })
+
+  $(document).ready(function() {
+    $('.menu-items-first').hover(
+        function() { // handler in
+          $('.navbar-images').css('opacity', 1);
+          // Additional actions (display info, etc.)
+        }, function() { // handler out
+          $('.navbar-images').css('opacity', 0);
+          // Additional actions (hide info, etc.)
+        }
+    );
+  })
+  
+
+
+
+  // Fade Animation //
+
+  
 // $('.handle').attr('style','left: 300px');, to edit style attribute //
 
 

@@ -369,6 +369,18 @@ li.menu-items-first {
 .language-selection .black-fnt {
     font-weight: 400;
 }
+.main-nav-images {
+    position: absolute;
+    width: 350px;
+    height: 450px;
+    margin-left: 500px;
+    margin-top: -80px;
+}
+.main-nav-images img {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
 @media (max-width: 900px) {
     .nav-img-holder {
         display: none;
