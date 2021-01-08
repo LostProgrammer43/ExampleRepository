@@ -203,7 +203,7 @@ button.header-nav-link:focus {
 }
 .data {
     text-align: left;
-    padding-top: 180px;
+    padding-top: 250px;
     padding-left: 75px;
 }
 .main-nav ul {
@@ -212,11 +212,11 @@ button.header-nav-link:focus {
 .main-nav li a {
     background: none;
     color: black;
-    font-size: 96px;
+    font-size: 36px;
     font-family: "Heebo", sans-serif;
-    font-weight: 400;
-    letter-spacing: -5px;
-    line-height: 100px;
+    font-weight: 200;
+    line-height: -50px;
+    letter-spacing: -2px;
 }
 span.Close {
     position: absolute;
@@ -280,7 +280,7 @@ span.menu-prop.reverse:hover {
 }
 .menu-item-arrow > ion-icon {
     position: relative;
-    top: 8px;
+    top: -8px;
     margin-right: 10px;
     opacity: 0;
     transition: all 0.2s ease-in-out;
@@ -292,8 +292,7 @@ span.menu-prop.reverse:hover {
     transition: all 0.2s ease-out;
 }
 .menu-item-arrow {
-    font-size: 33px;
-    font-weight: 400;
+    font-size: 5px;
 }
 li.menu-items-first:hover .menu-wrapper {
     padding-left: 0;
@@ -306,6 +305,9 @@ li.menu-items-other:hover .menu-wrapper {
 }
 li.menu-items-other:hover ion-icon {
     opacity: 1;
+}
+li.menu-items-other {
+    padding-top: 20px;
 }
 li.menu-items-first {
     overflow: hidden;
@@ -330,9 +332,8 @@ li.menu-items-first {
 .nav-footer-icons {
     width: 100%;
     height: 50px;
-    margin-top: 20px;
+    margin-top: 11 0px;
     display: flex;
-    
 }
 .border-top-footer {
     width: 120%;
