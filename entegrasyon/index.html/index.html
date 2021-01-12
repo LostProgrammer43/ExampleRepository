@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Animated tooltip using GSAP</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="wrapper">
+      <div class="project-list">
+        <div class="project p-1">
+          <div class="project-title"><h1>Motionland</h1></div>
+          <div class="project-categ">Branding</div>
+          <div class="project-overlay"></div>
+        </div>
+        <div class="project p-2">
+          <div class="project-title"><h1>Focus Reactive</h1></div>
+          <div class="project-categ">Photography</div>
+          <div class="project-overlay"></div>
+        </div>
+        <div class="project p-3">
+          <div class="project-title"><h1>Aspect</h1></div>
+          <div class="project-categ">/*aydoğdu sanat*/</div>
+          <div class="project-overlay"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var $cursor = $(".cursor"),
+        $overlay = $(".project-overlay");
+
+      function moveCircle(e) {
+        TweenLite.to($cursor, 0.5, {
+          css: {
+            left: e.pageX,
+            top: e.pageY
+          },
+          delay: 0.05
+        });
+      }
+
+      $(".p-1").hover(function() {
+        $(".cursor").css({ "background-image": "url(./img/kurukafa-1.jpeg)" });
+      });
+      $(".p-2").hover(function() {
+        $(".cursor").css({ "background-image": "url(./img/kurukafa-2.jpeg)" });
+      });
+      $(".p-3").hover(function() {
+        $(".cursor").css({ "background-image": "url(./img/kurukafa-3.jpeg)" });
+      });
+      $(".p-4").hover(function() {
+        $(".cursor").css({ "background-image": "url(./img/kurukafa-1.jpeg)" });
+      });
+
+      var flag = false;
+      $($overlay).mousemove(function() {
+        flag = true;
+        TweenLite.to($cursor, 0.3, { scale: 1, autoAlpha: 1 });
+        $($overlay).on("mousemove", moveCircle);
+      });
+
+      $($overlay).mouseout(function() {
+        flag = false;
+        TweenLite.to($cursor, 0.3, { scale: 0.1, autoAlpha: 0 });
+      });
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Smooth Scroll</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="smooth-scroll-wrapper">
+            <div class="content">
+                <h1>
+                    :no time to explain
+                </h1>
+                <div class="img"></div>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem animi ipsam itaque
+                    doloribus aliquid, veniam minus laborum doloremque quos ullam. Quas harum iure
+                    optio dolorem ea recusandae blanditiis ipsum praesentium.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam excepturi
+                    tenetur sapiente dolor deleniti. Fuga labore pariatur esse. Repudiandae,
+                    voluptates nisi soluta architecto inventore hic. Omnis eos expedita sed
+                    architecto illum mollitia! Totam aperiam vel consequuntur a, ipsum sapiente sit
+                    laborum exercitationem distinctio labore praesentium veniam accusamus, voluptate
+                    ratione suscipit!
+                </p>
+                <div class="img"></div>
+
+                <h1>:more than pretty screens</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos architecto suscipit
+                    ducimus nostrum, aut minus eius impedit vero numquam est optio reprehenderit
+                    itaque quis eligendi quasi repellendus obcaecati neque dolor ipsam nulla
+                    praesentium voluptatum. Est assumenda ea voluptatibus! Eaque quo ducimus, unde
+                    maxime enim nesciunt debitis voluptatem fuga obcaecati? Aperiam?
+                </p>
+
+                <div class="img"></div>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ea nihil quibusdam
+                    repudiandae praesentium quisquam eos, repellendus fugiat dolore! Neque.
+                </p>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <h1>
+                    :no time to explain
+                </h1>
+                <div class="img"></div>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem animi ipsam itaque
+                    doloribus aliquid, veniam minus laborum doloremque quos ullam. Quas harum iure
+                    optio dolorem ea recusandae blanditiis ipsum praesentium.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam excepturi
+                    tenetur sapiente dolor deleniti. Fuga labore pariatur esse. Repudiandae,
+                    voluptates nisi soluta architecto inventore hic. Omnis eos expedita sed
+                    architecto illum mollitia! Totam aperiam vel consequuntur a, ipsum sapiente sit
+                    laborum exercitationem distinctio labore praesentium veniam accusamus, voluptate
+                    ratione suscipit!
+                </p>
+                <div class="img"></div>
+
+                <h1>:more than pretty screens</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos architecto suscipit
+                    ducimus nostrum, aut minus eius impedit vero numquam est optio reprehenderit
+                    itaque quis eligendi quasi repellendus obcaecati neque dolor ipsam nulla
+                    praesentium voluptatum. Est assumenda ea voluptatibus! Eaque quo ducimus, unde
+                    maxime enim nesciunt debitis voluptatem fuga obcaecati? Aperiam?
+                </p>
+
+                <div class="img"></div>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ea nihil quibusdam
+                    repudiandae praesentium quisquam eos, repellendus fugiat dolore! Neque.
+                </p>
+            </div>
+        </div>
+        <script>
+            const body = document.body,
+                scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+                height = scrollWrap.getBoundingClientRect().height - 1,
+                speed = 0.04;
+                 
+            var offset = 0;
+
+            body.style.height = Math.floor(height) + "px";
+
+            function smoothScroll() {
+                offset += (window.pageYOffset - offset) * speed;
+
+                var scroll = "translateY(-" + offset + "px) translateZ(0)";
+                scrollWrap.style.transform = scroll;
+
+                callScroll = requestAnimationFrame(smoothScroll);
+            }
+
+            smoothScroll();
+        </script>
+    </body>
+</html>
+<!DOCTYPE html>
+<html lang="en" data-device="desktop" class="scrollin scroll-smooth" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aydoğdu Sanat</title>
+    <meta name="description" content="This will be a description of the Site">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="locomotive-scroll.css">
+    <link rel="icon" href="img/">
+    <link href="//db.onlinewebfonts.com/c/55d433372d270829c51e2577a78ef12d?family=Monument+Extended" rel="stylesheet" type="text/css"/>
+
+    <!-- Slick -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+
+     <!-- Jquery Cdn -->
+
+     <script
+     src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+     integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+     crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Cdn -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- GreenSock Cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+    <!-- Swiper JS -->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- TweenMax  -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    
+</head>
+<body class="body-normal">
+
+    <div class="wrapper-ext">
+        <div class="loader-ext"></div>
+    </div>
+
+    <div class="main-bg">
+        <header id="header-js" class="header">
+            <div class="header-content">
+                <h1 class="header-logo-white">
+                    <a href="">
+                        <img src="/Top-NavigationBar/img/aydogdu-white.svg" alt="" class="logo-white-active">
+                    </a>
+                </h1>
+                <div class="header-logo-black">
+                    <a href="">
+                        <img src="/Top-NavigationBar/img/aydogdu-black.svg" alt="" class="passive">
+                    </a>
+                </div>
+            </div>
+            <div class="header-navbar">
+                <ul class="buttons">
+                    <li class="header-buttons">
+                        <button class="header-nav-link" ><span class="menu-prop" data-text-swap="Close" >Menu</span></button>
+                        <div class="cursor"></div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="main-menu">
+            <div class="background">
+                <div class="back"></div>
+                </div>
+            </div>
+            <div role="navigation" class="menu">
+                <div class="nav-img-holder">
+                    <video class="video-player"muted="" playsinline="" autoplay="" loop="" data-prllx-delta=".4" >
+                        <source src="/Top-NavigationBar/video/background.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="data">
+                    <div class="main-nav-images">
+                        <img src="/Top-NavigationBar/img/navbar-images/image-1.jpg" alt="" class="navbar-images">
+                    </div>
+                    <ul class="main-nav">
+                        <li class="menu-items-first">
+                            <div class="menu-wrapper">
+                                <div class="menu-item-arrow">
+                                    <ion-icon name="arrow-forward-sharp" style="font-size: 50px;"></ion-icon>
+                                </div>
+                                <a href="">
+                                    Koleksiyon
+                                </a>
+                            </div>
+                        </li>
+                        <li class="menu-items-other">
+                            <div class="menu-wrapper">
+                                <div class="menu-item-arrow">
+                                    <ion-icon name="arrow-forward-sharp" style="font-size: 50px;"></ion-icon>
+                                </div>
+                                <a href="">
+                                    Teknik Porselen
+                                </a>
+                            </div>
+                        </li>
+                        <li class="menu-items-other">
+                            <div class="menu-wrapper">
+                                <div class="menu-item-arrow">
+                                    <ion-icon name="arrow-forward-sharp" style="font-size: 50px;"></ion-icon>
+                                </div>
+                                <a href="">
+                                    Seramik
+                                </a>
+                            </div>
+                        </li>
+                        <li class="menu-items-other">
+                            <div class="menu-wrapper">
+                                <div class="menu-item-arrow">
+                                    <ion-icon name="arrow-forward-sharp" style="font-size: 50px;"></ion-icon>
+                                </div>
+                                <a href="">
+                                    Hakkımızda
+                                </a>
+                            </div>
+                        </li>
+                        <li class="menu-items-other">
+                            <div class="menu-wrapper">
+                                <div class="menu-item-arrow">
+                                    <ion-icon name="arrow-forward-sharp" style="font-size: 50px;"></ion-icon>
+                                </div>
+                                <a href="">
+                                    Iletisim
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="nav-footer-icons">
+                        <div class="border-top-footer"></div>
+                        <div class="social-media">
+                            <a href=""><ion-icon name="logo-instagram" class="icon-social"></ion-icon></a>
+                            <a href=""><ion-icon name="logo-facebook" class="icon-social"></ion-icon></a>
+                            <a href=""><ion-icon name="logo-pinterest" class="icon-social"></ion-icon></a>
+                            <a href=""><ion-icon name="logo-linkedin" class="icon-social"></ion-icon></a>
+                        </div>
+                        <div class="language-selection">
+                            <a href=""><p class="normal-fnt">English/</p></a>
+                            <a href=""><p class="black-fnt">Türkçe</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+        
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>    
+
+    <script>
+
+    TweenMax.to(".wrapper-ext", 2, {
+        top: "-100%",
+        ease: Expo.easeInOut,
+        delay: 3.6
+    });
+
+    var tl = new TimelineMax();
+
+    tl.from(".loader-ext", 1.6, {
+        scaleY: "0%",
+        y: 80,
+        ease: Expo.easeInOut,
+        delay: 1,
+        transformOrigin:"50% 100%"
+    });
+
+    tl.to(".loader-ext", 1.6, {
+        height: "20vh",
+        scaleY: "0%",
+        ease: Expo.easeInOut,
+        transformOrigin:"0% -100%"
+    });
+
+    
+    </script>    
+
+    <script>
+        var sickPrimary = {
+            autoplay: true,
+            autoplaySpeed: 2400,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            speed: 1800,
+            cssEase: 'cubic-beizer(.84, 0, .08, .99)',
+            asNavFor: '.text-slider',
+            centerMode: true,
+            prevArrow: $('.prev-button'),
+            nextArrow: $('.next-button')
+
+        }
+
+        var sickSecondary = {
+            autoplay: true,
+            autoplaySpeed: 2400,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 1800,
+            cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+            asNavFor: '.image-slider',
+            prevArrow: $('.prev-button'),
+            nextArrow: $('next-button'),
+        }
+
+
+
+    </script>
+
+    <script src="/Top-NavigationBar/main.js"></script>
+
+    <script>
+
+        (function () {
+        
+              const link = document.querySelectorAll('.header-buttons > .header-nav-link');
+              const cursor = document.querySelector('.cursor');
+        
+              const animateit = function (e) {
+                    const span = this.querySelector('span');
+                    const { offsetX: x, offsetY: y } = e,
+                    { offsetWidth: width, offsetHeight: height } = this,
+        
+                    move = 5,
+                    xMove = x / width * (move * 2) - move,
+                    yMove = y / height * (move * 2) - move;
+        
+                    span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+        
+                    if (e.type === 'mouseleave') span.style.transform = '';
+              };
+        
+              const editCursor = e => {
+                    const { clientX: x, clientY: y } = e;
+                    cursor.style.left = x + 'px';
+                    cursor.style.top = y + 'px';
+              };
+        
+              link.forEach(b => b.addEventListener('mousemove', animateit));
+              link.forEach(b => b.addEventListener('mouseleave', animateit));
+              window.addEventListener('mousemove', editCursor);
+        
+        })();
+    </script>
+    <script src="/Top-NavigationBar/locomotive-scroll.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+</body>
+</html
