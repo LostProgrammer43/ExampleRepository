@@ -26,7 +26,6 @@ $(".menu-prop").on("click", function() {
 $(".header-nav-link").click(function() {
     $('.logo-white-active').toggleClass('passive');
     $('.passive').toggleClass('logo-black-active');
-    $('.smooth-scroll-wrapper').toggleClass('invisible');
     $('.body-in').toggleClass('body-no-scroll');
   });
 
