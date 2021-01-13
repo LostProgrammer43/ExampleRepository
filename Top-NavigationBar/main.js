@@ -26,9 +26,14 @@ $(".menu-prop").on("click", function() {
 $(".header-nav-link").click(function() {
     $('.logo-white-active').toggleClass('passive');
     $('.passive').toggleClass('logo-black-active');
-    $('.body-normal').toggleClass('no-scroll');
+    $('.body-in').toggleClass('body-no-scroll');
   });
 
+$('#user_button').toggle(function () {
+    $("#user_button").addClass("active");
+}, function () {
+    $("#user_button").removeClass("active");
+});
 $(".header-nav-link").click(function() {
     $('.cursor').toggleClass('cursor-black');
   });  
