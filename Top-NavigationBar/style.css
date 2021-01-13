@@ -9,18 +9,33 @@
   box-sizing: border-box;
   font-size: 13px;
 }
-html, body{
+html {
     background-color: black;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
     scroll-behavior: smooth;
-}
-body.body-normal.no-scroll {
     overflow-x: hidden;
-    overflow-y: hidden;
+}
+.body-in {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.body-no-scroll {
+    background-color: black;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow: hidden !important;
 }
 .overlay::before {
     animation: grain ls steps(10) infinite;
@@ -205,6 +220,7 @@ button.header-nav-link:focus {
     text-align: left;
     padding-top: 250px;
     padding-left: 75px;
+    z-index: 10000;
 }
 .main-nav ul {
     list-style: none;
@@ -410,4 +426,35 @@ li.menu-items-first {
     .header-navbar {
         top: 10%;
     }
+}
+.smooth-scroll-wrapper {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.invisible {
+    visibility: hidden;
+    transition: all 0.2s ease-out;
+}
+.content {
+    width: 80%;
+    margin: 160px auto;
+}
+h1 {
+    font-size: 80px;
+}
+p {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.6);
+}
+.img {
+    width: 100%;
+    height: 300px;
+    background: url(kurukafa-1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    margin: 40px auto;
 }
