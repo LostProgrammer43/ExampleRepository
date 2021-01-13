@@ -27,6 +27,7 @@ $(".header-nav-link").click(function() {
     $('.logo-white-active').toggleClass('passive');
     $('.passive').toggleClass('logo-black-active');
     $('.body-in').toggleClass('body-no-scroll');
+    $('.resize').toggleClass('resize-active');
   });
 
 $('#user_button').toggle(function () {
