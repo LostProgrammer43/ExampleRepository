@@ -9,18 +9,33 @@
   box-sizing: border-box;
   font-size: 13px;
 }
-html, body{
+html {
     background-color: black;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
     scroll-behavior: smooth;
-}
-body.body-normal.no-scroll {
     overflow-x: hidden;
-    overflow-y: hidden;
+}
+.body-in {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.body-no-scroll {
+    background-color: black;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow: hidden !important;
 }
 .overlay::before {
     animation: grain ls steps(10) infinite;
@@ -205,6 +220,7 @@ button.header-nav-link:focus {
     text-align: left;
     padding-top: 250px;
     padding-left: 75px;
+    z-index: 10000;
 }
 .main-nav ul {
     list-style: none;
@@ -410,4 +426,23 @@ li.menu-items-first {
     .header-navbar {
         top: 10%;
     }
+}
+.home-content {
+    z-index: 1000;
+    opacity: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 96%;
+}
+.home-1 {
+    width: 100%;
+    height: 100vh;
+}
+
+.home-1 h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: white;
 }

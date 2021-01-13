@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
 
-     <!-- Jquery Cdn -->
+    <!-- Jquery Cdn -->
 
      <script
      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -42,8 +42,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     
 </head>
-<body class="body-normal">
-
+<body class="body-in">
     <div class="wrapper-ext">
         <div class="loader-ext"></div>
     </div>
@@ -71,12 +70,19 @@
                 </ul>
             </div>
         </header>
+        <div class="home-content">
+            <div class="home-1">
+                <div class="content-1">
+                    <h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</h1>
+                </div>
+            </div>
+        </div>
         <div class="main-menu">
             <div class="background">
                 <div class="back"></div>
                 </div>
-            </div>
-            <div role="navigation" class="menu">
+        </div>
+        <div role="navigation" class="menu">
                 <div class="nav-img-holder">
                     <video class="video-player"muted="" playsinline="" autoplay="" loop="" data-prllx-delta=".4" >
                         <source src="/Top-NavigationBar/video/background.mp4" type="video/mp4">
@@ -152,9 +158,32 @@
                         </div>
                     </div>
                 </div>
-            </div>
+        </div>
+        
     </div>
         
+    <script>
+        const body = document.body,
+            scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+            height = scrollWrap.getBoundingClientRect().height - 1,
+            speed = 0.04;
+
+        var offset = 0;
+
+        body.style.height = Math.floor(height) + "px";
+
+        function smoothScroll() {
+            offset += (window.pageYOffset - offset) * speed;
+
+            var scroll = "translateY(-" + offset + "px) translateZ(0)";
+            scrollWrap.style.transform = scroll;
+
+            callScroll = requestAnimationFrame(smoothScroll);
+        }
+
+        smoothScroll();
+
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>    
 
