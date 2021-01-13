@@ -73,21 +73,27 @@
         </header>
         <div class="main-landing">
             <div class="hero">
-                <div class="toggle">
-                    <div class="toggle-buttons">
-                        <div class="right-arrow"></div>
-                        <div class="left-arrow"></div>
-                        <div class="middle-point"></div>
+                <div class="text-slider-wrapper">
+                    <div class="text-slider">
+                          <div class="text-slide"><h1>A blessing for <br> every skin.</h1></div>
+                          <div class="text-slide"><h1>The perfect mix of <br> old & new.</h1></div>
+                          <div class="text-slide"><h1>A journey over borders <br> & generations.</h1></div>
+                          <div class="text-slide"><h1>Your are the <br> stylist.</h1></div>
+                          <div class="text-slide"><h1>To be on the <br> forerfront.</h1></div>
                     </div>
-                    <div class="toggle-numbers">
-                        <span class="number">01</span>
-                    </div>
-                </div>
-                <div class="hero-slider">
-                    <div class="image-slider"></div>
-                    <div class="content-text-slider"></div>
-                    <div class="normal-text-slider"></div>
-                </div>
+              </div>
+        
+              <div class="slider-control">
+                    <div class="prev"><button type="button"><ion-icon name="arrow-back"></ion-icon></button></div>
+                    <div class="next"><button type="button"><ion-icon name="arrow-forward"></ion-icon></button></div>
+              </div>
+        
+              <div class="image-slider">
+                    <div class="image-slide" id="one" style="background: url(/Top-NavigationBar/img-2/img-2.jpg) no-repeat 20% 20%; background-size: cover;"></div>
+                    <div class="image-slide" id="two" style="background: url(/Top-NavigationBar/img-2/img-1.jpg) no-repeat 50% 50%; background-size: cover;"></div>
+                    <div class="image-slide" id="four" style="background: url(/Top-NavigationBar/img-2/img-2.jpg) no-repeat 50% 50%; background-size: cover;"></div>
+                    <div class="image-slide" id="five" style="background: url(/Top-NavigationBar/img-2/img-1.jpg) no-repeat 50% 50%; background-size: cover;"></div>
+              </div>
             </div>
         </div>
         <div class="main-menu">
@@ -173,10 +179,9 @@
                 </div>
             </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+    <script src="slick.js"></script>
         
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>    
-
     <script>
 
     TweenMax.to(".wrapper-ext", 2, {
@@ -204,37 +209,6 @@
 
     
     </script>    
-
-    <script>
-        var sickPrimary = {
-            autoplay: true,
-            autoplaySpeed: 2400,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            speed: 1800,
-            cssEase: 'cubic-beizer(.84, 0, .08, .99)',
-            asNavFor: '.text-slider',
-            centerMode: true,
-            prevArrow: $('.prev-button'),
-            nextArrow: $('.next-button')
-
-        }
-
-        var sickSecondary = {
-            autoplay: true,
-            autoplaySpeed: 2400,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            speed: 1800,
-            cssEase: 'cubic-bezier(.84, 0, .08, .99)',
-            asNavFor: '.image-slider',
-            prevArrow: $('.prev-button'),
-            nextArrow: $('next-button'),
-        }
-
-
-
-    </script>
 
     <script src="/Top-NavigationBar/main.js"></script>
 
@@ -271,7 +245,37 @@
         
         })();
     </script>
-    <script src="/Top-NavigationBar/locomotive-scroll.min.js"></script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <script>
+
+        var sickPrimary = {
+              autoplay: true,
+              autoplaySpeed: 2400,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              speed: 1800,
+              cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+              asNavFor: '.text-slider',
+              centerMode: true,
+              prevArrow: $('.prev'),
+              nextArrow: $('.next')
+        }
+        
+        var sickSecondary = {
+              autoplay: true,
+              autoplaySpeed: 2400,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              speed: 1800,
+              cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+              asNavFor: '.image-slider',
+              prevArrow: $('.prev'),
+              nextArrow: $('.next')
+        }
+        
+        $('.image-slider').slick(sickPrimary);
+        $('.text-slider').slick(sickSecondary);
+        
+        </script>
 </body>
 </html

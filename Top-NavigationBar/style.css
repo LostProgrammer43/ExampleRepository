@@ -15,12 +15,8 @@ html, body{
     padding: 0;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
-    scroll-behavior: smooth;
-}
-body.body-normal.no-scroll {
     overflow-x: hidden;
-    overflow-y: hidden;
+    scroll-behavior: smooth;
 }
 .overlay::before {
     animation: grain ls steps(10) infinite;
@@ -83,11 +79,13 @@ body.body-normal.no-scroll {
     align-items: flex-end;
     position: relative;
     pointer-events: auto;
+    z-index: 200000;
 }
 .header .header-logo-black {
     justify-content: flex-start;
     align-items: flex-end;
     position: relative;
+    z-index: 200000;
     pointer-events: auto;
 }
 .header .header-navbar {
@@ -118,7 +116,7 @@ body.body-normal.no-scroll {
     font-weight: 100;
     color: rgb(255, 255, 255);
     padding: 10px 5px;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Heebo', sans-serif;
     transition: all 0.3s ease;
 }
 .header-nav-link > span {
@@ -132,6 +130,7 @@ a:active, a:hover, a:link, a:visited {
 .header-logo-white .logo-white-active {
     height: 100px;
     margin-right: 100px;
+    z-index: 200000;
 }
 .passive {
     opacity: 0;
@@ -140,13 +139,16 @@ a:active, a:hover, a:link, a:visited {
     height: 90px;
     padding-left: 3.2px;
     opacity: 1 !important;
+    z-index: 200000;
 }
 .header .header-content, .header .header-logo-white {
     display: flex;
+    z-index: 200000;
 }
 .header .header-content, .header .header-logo-black {
     display: flex;
     position: absolute;
+    z-index: 200000;
 }
 .header li {
     padding-left: 50px;
@@ -166,8 +168,9 @@ a:active, a:hover, a:link, a:visited {
     opacity: 1;
 }
 span.menu-button {
-    font-family: "Orbitron", sans-serif;
+    font-family: "Heebo", sans-serif;
     font-size: 22px;
+    font-weight: 100;
     text-decoration: none;
     border: none;
     background-color: black;
@@ -177,7 +180,8 @@ span.menu-button {
 button.header-nav-link {
     border: none;
     background: none;
-    font-family: "Orbitron", sans-serif;
+    font-family: "Heebo", sans-serif;
+    font-weight: 100;
     font-size: 22px;
     text-decoration: none;
     color: white;
@@ -205,6 +209,7 @@ button.header-nav-link:focus {
     text-align: left;
     padding-top: 250px;
     padding-left: 75px;
+    z-index: 10;
 }
 .main-nav ul {
     list-style: none;
@@ -234,10 +239,12 @@ span.Close {
     justify-content: flex-start;
     align-items: flex-end;
     position: relative;
+    z-index: 200000;
     pointer-events: auto;
 }
 .header-logo-black a{
     font-size: 20px;
+    z-index: 200000;
     font-family: "Heebo", sans-serif;
     color: black;
     text-decoration: none;
@@ -411,3 +418,129 @@ li.menu-items-first {
         top: 10%;
     }
 }
+.hero {
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+}
+.invisible-hero {
+    visibility: hidden;
+}
+.image-slider {
+    z-index: 0;
+    margin-top: 0;
+    margin-left: 80%;
+    width: 100%;
+    height: 100vh;
+}
+.image-slide {
+    height: 100vh;
+    margin-left: 10%;
+}
+.slick-slide.slick-center {
+    transform: scale(1.2);
+    transition: transform .8s 1.4s cubic-bezier(.84, 0, .08, .99);
+}
+.slick-slide {
+    transition: transform .7s cubic-bezier(.84, 0, .08, .99);
+}
+.slider-control {
+    margin: 0%;
+    position: absolute;
+    z-index: 2;
+    bottom: 8%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+button {
+    color: #fff;
+    background: none;
+    padding: 24px;
+    border: 1px solid white;
+    font-size: 16px;
+    border-radius: 50%;
+    margin: .4em;
+    display: inline-block;
+}
+button:focus {
+    outline: none;
+}
+.block-2 {
+    z-index: 1;
+    position: fixed;
+    height: 100vh;
+    width: 25%;
+    left: 25%;
+    background:black;
+}
+.block-3 {
+    z-index: 1;
+    position: fixed;
+    height: 100vh;
+    width: 5%;
+    right: 0%;
+    background: #0f0f0f;
+}
+.text-slider-wrapper {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    top: 45%;
+}
+.text-slider {
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+}
+.text-slide h1 {
+    color: #fff;
+    font-size: 64px;
+    font-family: "Heebo", sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding-left: 10%;
+}
+
+
+/*
+.slider-control button {
+    color: #fff;
+    width: 71px;
+    height: 71px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.slider-control button:hover {
+    transition: all 1s ease;
+    color:black;
+    background: none;
+    padding: 24px;
+    border: none;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: white;
+    outline: none;
+    border: none;
+}
+.slider-control button:focus {
+    transition: all 1s ease;
+    color:black;
+    background: none;
+    padding: 24px;
+    border: none;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: white;
+    outline: none;
+    border: none;
+}*/
