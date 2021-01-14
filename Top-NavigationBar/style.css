@@ -865,3 +865,12 @@ h1.product-title {
     opacity: 0.2;
     z-index: 10000;
 }
+.logo-animation {
+    position: relative;
+    top: 45%;
+    left: 46%;
+    width: 8%;
+    height: 20vh;
+    z-index: 200001;
+    opacity: 1;
+}

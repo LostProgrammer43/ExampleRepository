@@ -64,9 +64,6 @@ $(".header-nav-link").click(function() {
     );
   })
   
-
-
-
   // Fade Animation //
 
   

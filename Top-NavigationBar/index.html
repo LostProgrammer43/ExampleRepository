@@ -51,6 +51,9 @@
 
     <div class="wrapper-ext">
         <div class="loader-ext"></div>
+        <div class="logo-animation">
+            <img src="/Top-NavigationBar/img/aydogdu-white.svg" alt="">
+        </div>
     </div>
 
     <div class="main-bg">
@@ -351,6 +354,14 @@
         scaleY: "0%",
         ease: Expo.easeInOut,
         transformOrigin:"0% -100%"
+    });
+
+    tl.from(".loader-ext", 1.6, {
+        scaleY: "0%",
+        y: 80,
+        ease: Expo.easeInOut,
+        delay: 1,
+        
     });
 
     
