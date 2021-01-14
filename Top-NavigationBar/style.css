@@ -534,7 +534,7 @@ button:focus {
     width: 100%;
     height: 100vh;
     background-color: black;
-    z-index: 200000;
+    z-index: 200001;
 }
 .section-4 {
     position: relative;
@@ -584,7 +584,7 @@ button:focus {
 .third-center-text {
     margin-left: 300px;
     margin-right: 300px;
-    margin-top: 150px;
+    margin-top: 650px;
     justify-content: center;
     text-align: center;
 }
@@ -620,35 +620,29 @@ button:focus {
     transform: translateY(-50%);
     text-align: right;
 }
-.right-side-bar ul {
-    list-style: none;
-}
 .title {
     font-size: 36px;
     font-family: "Playfail Display";
     padding-bottom: 40px;
 }
-.right-side-bar li:not(:first-child) {
-    padding: 6px 0;
-}
 .product {
-    position: absolute;;
+    position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 60%;
+    transform: translate(-100%, -100%);
     animation: fly 4s ease-in-out infinite;
 }
 @keyframes fly {
     0% {
-          transform: translate(-50%, -46%);
+          transform: translate(-50%, -48%);
     }
 
     50% {
-          transform: translate(-50%, -54%);
+          transform: translate(-50%, -52%);
     }
 
     100% {
-          transform: translate(-50%, -46%);
+          transform: translate(-50%, -48%);
     }
 }
 .left-bottom {
@@ -677,13 +671,13 @@ button:focus {
     border: none;
     font-family: 'Heebo', sans-serif;
     font-weight: bolder;
-    letter-spacing: 4px;
+    margin-top: 50px;
 }
 .left-side-bar p {
     font-family: 'Heebo', sans-serif;
     font-weight: 100;
     line-height: 24px;
-    color: grey;
+    color: black;
     margin-top: 50px;
 }
 #price {
@@ -695,4 +689,47 @@ h1.product-title {
     line-height: 24px;
     color: black;
     font-size: 40px;
+}
+.sec-product {
+    position: absolute;
+    top: 50%;
+    left: 63%;
+    z-index: 10000;
+}
+.third-product {
+    position: absolute;
+    top: 90%;
+    left: 4%;
+    z-index: 200001;
+    width: 400px;
+    height: 540px;
+}
+.background-product {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin-top: 50px;
+    z-index: 200001;
+    position: absolute;
+}
+.background-white-product {
+    width: 700px;
+    height: 650px;
+    background-color: white;
+    position: absolute;
+}
+.free-text {
+    top: 0;
+    left: 2%;
+    width: 400px;
+}
+.story-1 {
+    width: 700px;
+    margin-top: 200px;
+    margin-left: 70px;
+    position: absolute;
+    color: white;
+    line-height: 27px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 100;
 }
