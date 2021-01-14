@@ -459,7 +459,7 @@ li.menu-items-first {
     transform: translate(-50%, -50%);
     display: flex;
 }
-button {
+.slider-control button {
     color: #fff;
     background: none;
     padding: 24px;
@@ -526,21 +526,21 @@ button:focus {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: white;
+    background-color: black;
     z-index: 200000;
 }
 .section-3 {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: white;
+    background-color: black;
     z-index: 200000;
 }
 .section-4 {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: white;
+    background-color: black;
     z-index: 200000;
 }
 .section-contents {
@@ -564,7 +564,7 @@ button:focus {
     font-family: 'Heebo', sans-serif;
     font-weight: 100;
     font-size: 64px;
-    color: black;
+    color: white;
 
 }
 .sec-center-text {
@@ -578,7 +578,7 @@ button:focus {
     font-family: 'Heebo', sans-serif;
     font-weight: 100;
     font-size: 64px;
-    color: black;
+    color: white;
 
 }
 .third-center-text {
@@ -592,6 +592,107 @@ button:focus {
     font-family: 'Heebo', sans-serif;
     font-weight: 100;
     font-size: 64px;
-    color: black;
+    color: white;
 
+}
+.section-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.left, .right {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+}
+.left {
+    background: #ffffff;
+}
+.right {
+    left: 50%;
+    background: black;
+}
+.right-side-bar {
+    right: 80px;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    text-align: right;
+}
+.right-side-bar ul {
+    list-style: none;
+}
+.title {
+    font-size: 36px;
+    font-family: "Playfail Display";
+    padding-bottom: 40px;
+}
+.right-side-bar li:not(:first-child) {
+    padding: 6px 0;
+}
+.product {
+    position: absolute;;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fly 4s ease-in-out infinite;
+}
+@keyframes fly {
+    0% {
+          transform: translate(-50%, -46%);
+    }
+
+    50% {
+          transform: translate(-50%, -54%);
+    }
+
+    100% {
+          transform: translate(-50%, -46%);
+    }
+}
+.left-bottom {
+    position: absolute;
+    left: 60px;
+    bottom: 40px;
+    font-family: helvetica;
+    letter-spacing: 3px;
+    color: grey;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.left-side-bar {
+    left: 60px;
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%);
+    text-align: left;
+    width: 26%;
+}
+.left-side-bar button {
+    padding: 24px 48px;
+    background: #101010;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 4px;
+}
+.left-side-bar p {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 100;
+    line-height: 24px;
+    color: grey;
+    margin-top: 50px;
+}
+#price {
+    color: #000;
+}
+h1.product-title {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 200;
+    line-height: 24px;
+    color: black;
+    font-size: 40px;
 }
